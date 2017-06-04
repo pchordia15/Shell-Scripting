@@ -1,0 +1,27 @@
+#!/bin/bash
+
+OIFS="IFS"
+
+IFS=","
+
+read -p "Enter two numbers to add seperated by a comma: " num1 num2
+
+num1=${num1//[[:blank:]]/}
+num2=${num2//[[:blank:]]/}
+
+sum=$((num1+num2))
+
+echo "$num1 + $num2 = $sum"
+
+IFS="$OIFS"
+
+name="Priyanka"
+echo "${name}'s Code"
+
+samp_string="The dog climbed the tree"
+echo "${samp_string//dog/cat}"
+
+echo "I am ${name:-Priyanka}"
+
+echo "I am ${name:=Chordia}"
+echo $name
