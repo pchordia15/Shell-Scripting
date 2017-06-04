@@ -1,0 +1,42 @@
+#!/bin/bash
+
+myName="Priyanka Chordia"
+
+echo "My name is: $myName"
+
+declare -r num1=5
+num2=3
+
+num3=$((num1+num2))
+num4=$((num1-num2))
+num5=$((num1*num2))
+num6=$((num1/num2))
+
+echo "5 + 3 = $num3"
+echo "5 - 3 = $num4"
+echo "5 * 3 = $num5"
+echo "5 / 3 = $num6"
+
+echo $((5**2))
+echo $((5%4))
+
+rand=5
+let rand+=4
+echo "$rand"
+
+echo "rand++ = $((rand++))"
+echo "++rand = $((++rand))"
+echo "rand-- = $((rand--))"
+echo "--rand = $((--rand))"
+
+num7=1.2
+num8=3.4
+num9=$(python -c "print $num7+$num8")
+echo $num9
+
+cat<<END
+This
+is
+a
+test
+END
