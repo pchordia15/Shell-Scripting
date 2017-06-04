@@ -1,0 +1,35 @@
+#!/bin/bash
+
+getDate(){
+   date
+   return
+}
+
+getDate
+
+name="Priyanka"
+
+demLocal(){
+   local name="Priyanka Chordia"
+   return
+}
+
+demLocal
+
+echo "$name"
+
+getSum(){
+   local num1=$1
+   local num2=$2
+
+   local sum=$((num1+num2))
+
+   echo $sum
+}
+
+num3=10
+num4=20
+
+sum=$(getSum num3 num4)
+
+echo "The sum is $sum"
